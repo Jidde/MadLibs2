@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="167-2L-o0P">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Mad Libs-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MadLibs2" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,11 +16,67 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="plI-Dt-iKx">
+                                <rect key="frame" x="0.0" y="64" width="600" height="497"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KNn-cf-D6W">
+                                        <rect key="frame" x="20" y="20" width="560" height="457"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="madlibs" translatesAutoresizingMaskIntoConstraints="NO" id="z3K-mC-xli">
+                                                <rect key="frame" x="139" y="0.0" width="282" height="308"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="300" verticalHuggingPriority="500" horizontalCompressionResistancePriority="600" verticalCompressionResistancePriority="600" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obm-lM-7PU">
+                                                <rect key="frame" x="0.0" y="308" width="560" height="149"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="149" id="cOB-e1-Mt4"/>
+                                                </constraints>
+                                                <string key="text">Welcome to Mad Libs! I will ask you to fill in the words to complete a story. You won't be able to see the whole story until you are done filling in all the words.That's part of the fun! Click below to get started....</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="KNn-cf-D6W" secondAttribute="trailing" constant="20" id="0XY-Ry-CEG"/>
+                                    <constraint firstAttribute="bottom" secondItem="KNn-cf-D6W" secondAttribute="bottom" constant="20" id="66Y-8b-oaX"/>
+                                    <constraint firstItem="KNn-cf-D6W" firstAttribute="leading" secondItem="plI-Dt-iKx" secondAttribute="leading" constant="20" id="Mhs-nL-E57"/>
+                                    <constraint firstItem="KNn-cf-D6W" firstAttribute="top" secondItem="plI-Dt-iKx" secondAttribute="top" constant="20" id="UT0-l6-bRz"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrg-j2-26X">
+                                <rect key="frame" x="0.0" y="560" width="600" height="40"/>
+                                <color key="backgroundColor" red="0.74117647060000003" green="0.015686274510000001" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ywb-c4-DWc"/>
+                                </constraints>
+                                <state key="normal" title="Make a story!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Mdg-Vx-1Ck" kind="show" identifier="FirstSegue" id="bGI-ng-7mP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="plI-Dt-iKx" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="-39" id="1Yz-ZD-EHN"/>
+                            <constraint firstAttribute="trailing" secondItem="plI-Dt-iKx" secondAttribute="trailing" id="Bmh-Jp-hRl"/>
+                            <constraint firstItem="plI-Dt-iKx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="FUD-lh-YFh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rrg-j2-26X" secondAttribute="bottom" id="PZu-UA-663"/>
+                            <constraint firstItem="plI-Dt-iKx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cRd-in-f1l"/>
+                            <constraint firstAttribute="trailing" secondItem="rrg-j2-26X" secondAttribute="trailing" id="deX-xw-Ufq"/>
+                            <constraint firstItem="rrg-j2-26X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="thC-Bn-JCD"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Mad Libs" id="cYW-25-43P"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1057" y="349"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="vCZ-pp-ke8">
@@ -33,12 +89,69 @@
                     <view key="view" contentMode="scaleToFill" id="zXD-AD-LYh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ylp-67-iSj">
+                                <rect key="frame" x="0.0" y="560" width="600" height="40"/>
+                                <color key="backgroundColor" red="0.74117647060000003" green="0.015686274510000001" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8AU-Wg-uKZ"/>
+                                </constraints>
+                                <state key="normal" title="Submit story">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="S39-2R-qZt" kind="presentation" identifier="SecondSegue" id="f34-wl-pJR"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6l-lL-p6l">
+                                <rect key="frame" x="0.0" y="64" width="600" height="488"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="kIf-LO-j7b">
+                                        <rect key="frame" x="171" y="84" width="258" height="233"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Fill in words to complete the story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veN-30-td9">
+                                                <rect key="frame" x="0.0" y="0.0" width="258" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" misplaced="YES" text="Number of words left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2m-mC-DTa">
+                                                <rect key="frame" x="48" y="102" width="162" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="752" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your word here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="71d-Yg-Vle">
+                                                <rect key="frame" x="52" y="203" width="154" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="kIf-LO-j7b" firstAttribute="centerX" secondItem="Y6l-lL-p6l" secondAttribute="centerX" id="G8u-QW-hbT"/>
+                                    <constraint firstAttribute="bottom" secondItem="kIf-LO-j7b" secondAttribute="bottom" constant="171" id="Zl4-zA-C0a"/>
+                                    <constraint firstItem="kIf-LO-j7b" firstAttribute="top" secondItem="Y6l-lL-p6l" secondAttribute="top" constant="84" id="ojk-MN-WLq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ylp-67-iSj" firstAttribute="top" secondItem="Y6l-lL-p6l" secondAttribute="bottom" constant="8" symbolic="YES" id="1aH-xw-xr3"/>
+                            <constraint firstItem="Y6l-lL-p6l" firstAttribute="trailing" secondItem="Ylp-67-iSj" secondAttribute="trailing" id="7aD-fu-MiB"/>
+                            <constraint firstAttribute="trailing" secondItem="Ylp-67-iSj" secondAttribute="trailing" id="Xi8-aj-Das"/>
+                            <constraint firstItem="Ylp-67-iSj" firstAttribute="bottom" secondItem="Jex-yt-gw5" secondAttribute="top" id="bZM-1N-LPo"/>
+                            <constraint firstItem="Ylp-67-iSj" firstAttribute="leading" secondItem="zXD-AD-LYh" secondAttribute="leading" id="iVE-Wv-8zr"/>
+                            <constraint firstItem="Y6l-lL-p6l" firstAttribute="top" secondItem="Vuv-Ua-1Ob" secondAttribute="bottom" id="jP6-YU-HVU"/>
+                            <constraint firstItem="Y6l-lL-p6l" firstAttribute="leading" secondItem="Ylp-67-iSj" secondAttribute="leading" id="ta4-ga-8ub"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zUT-45-a08" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="965" y="349"/>
+            <point key="canvasLocation" x="1777" y="349"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="gGS-V6-2BF">
@@ -51,12 +164,56 @@
                     <view key="view" contentMode="scaleToFill" id="YVs-le-aw2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faU-pF-tzi">
+                                <rect key="frame" x="0.0" y="560" width="600" height="40"/>
+                                <color key="backgroundColor" red="0.74117647060000003" green="0.015686274510000001" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="usm-xu-6ab"/>
+                                </constraints>
+                                <state key="normal" title="Make an other story">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Aq-VZ-Ob2">
+                                <rect key="frame" x="261" y="289" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="faU-pF-tzi" firstAttribute="leading" secondItem="YVs-le-aw2" secondAttribute="leading" id="IiT-VP-eHM"/>
+                            <constraint firstAttribute="trailing" secondItem="faU-pF-tzi" secondAttribute="trailing" id="qk0-uF-MCI"/>
+                            <constraint firstItem="faU-pF-tzi" firstAttribute="bottom" secondItem="6eW-Yk-nb1" secondAttribute="top" id="riX-WS-6k4"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hg5-yB-yqP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1653" y="349"/>
+            <point key="canvasLocation" x="2465" y="349"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GOz-1u-MCq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="167-2L-o0P" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sut-3i-mSl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DQ4-xd-hmZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n3v-Td-Amn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="176" y="349"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="madlibs" width="282" height="308"/>
+    </resources>
 </document>
