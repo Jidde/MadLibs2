@@ -22,6 +22,7 @@
 		AC21345A1CCBFEA10069D660 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2134541CCBFEA10069D660 /* Story.swift */; };
 		AC21345C1CCBFF9E0069D660 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC21345B1CCBFF9E0069D660 /* SecondViewController.swift */; };
 		AC21345E1CCBFFAE0069D660 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC21345D1CCBFFAE0069D660 /* ThirdViewController.swift */; };
+		AC2134601CCD077D0069D660 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC21345F1CCD077D0069D660 /* FirstViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		AC2134541CCBFEA10069D660 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		AC21345B1CCBFF9E0069D660 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		AC21345D1CCBFFAE0069D660 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		AC21345F1CCD077D0069D660 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				AC2134531CCBFEA10069D660 /* madlib4_dance.txt */,
 				AC2134211CCBFE6E0069D660 /* AppDelegate.swift */,
 				AC2134231CCBFE6E0069D660 /* ViewController.swift */,
+				AC21345F1CCD077D0069D660 /* FirstViewController.swift */,
 				AC21345B1CCBFF9E0069D660 /* SecondViewController.swift */,
 				AC21345D1CCBFFAE0069D660 /* ThirdViewController.swift */,
 				AC2134541CCBFEA10069D660 /* Story.swift */,
@@ -291,6 +294,7 @@
 				AC21345C1CCBFF9E0069D660 /* SecondViewController.swift in Sources */,
 				AC2134241CCBFE6E0069D660 /* ViewController.swift in Sources */,
 				AC21345E1CCBFFAE0069D660 /* ThirdViewController.swift in Sources */,
+				AC2134601CCD077D0069D660 /* FirstViewController.swift in Sources */,
 				AC2134221CCBFE6E0069D660 /* AppDelegate.swift in Sources */,
 				AC21345A1CCBFEA10069D660 /* Story.swift in Sources */,
 			);
@@ -519,6 +523,7 @@
 				AC2134481CCBFE6E0069D660 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC2134491CCBFE6E0069D660 /* Build configuration list for PBXNativeTarget "MadLibs2Tests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +532,7 @@
 				AC21344B1CCBFE6E0069D660 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC21344C1CCBFE6E0069D660 /* Build configuration list for PBXNativeTarget "MadLibs2UITests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +541,7 @@
 				AC21344E1CCBFE6E0069D660 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

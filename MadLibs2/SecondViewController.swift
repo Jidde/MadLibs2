@@ -7,12 +7,50 @@
 //
 
 import UIKit
+import Foundation
 
 class SecondViewController: UIViewController {
+    
+    @IBOutlet weak var textField: UITextField!
+    var wordsArray: [String] = []
+    @IBOutlet weak var wordsLeft: UILabel!
+    
+    
+    var story: Story!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let number = Int(arc4random_uniform(4))
+        
+        func importTheText (number: Int) -> String{
+            
+            let textNames = ["madlib0_simple", "madlib1_tarzan", "madlib2_university", "madlib3_clothes", "madlib4_dance"]
+            
+            var text: String?
+            
+            if let path: String = NSBundle.mainBundle().pathForResource(textNames[number], ofType: "txt") {
+                do {
+                    text = try String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
+                    if text != nil {
+                        return text!
+                    }
+                } catch {
+                    print("Error, you fucked up!")
+                    /* error handling here */
+                }
+            }
+            return "error"
+        }
+        
+        
+        let text = importTheText(number)
+            
+        story = Story(stream: text)
+        story.read(text)
+        
+        wordsLeft.text = "\(story.getPlaceholderCount()) word(s) left"
+        
         // Do any additional setup after loading the view.
     }
 
@@ -21,15 +59,39 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func appendWord(sender: AnyObject) {
+        wordsArray.append(textField.text!)
+        
+        story.getNextPlaceholder()
+        if textField != nil {
+            story.fillInPlaceholder(textField.text!)
+        }
+        
+        wordsLeft.text = "\(story.getPlaceholderRemainingCount()) word(s) left"
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if story.isFilledIn() == true {
+            self.performSegueWithIdentifier("secondSegue", sender: self)
+        }
     }
-    */
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if (segue.identifier == "secondSegue") {
+            
+            if let tvc = segue.destinationViewController as? ThirdViewController {
+                tvc.variable = story.toString()
+            }
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+

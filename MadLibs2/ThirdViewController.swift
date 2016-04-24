@@ -9,10 +9,17 @@
 import UIKit
 
 class ThirdViewController: UIViewController {
+    
+    var variable: String?
+    
+    @IBOutlet weak var storyField: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if variable != nil {
+            storyField.text = variable
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -22,14 +29,12 @@ class ThirdViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func makeNewStory(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        /*
+            STUFF NAAR DELEGATE
+        */
+        
     }
-    */
-
 }
