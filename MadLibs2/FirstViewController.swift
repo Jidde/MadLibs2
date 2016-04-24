@@ -4,12 +4,13 @@
 //
 //  Created by Jidde Koekoek on 24/04/16.
 //  Copyright © 2016 Jidde Koekoek. All rights reserved.
-//
+//  FirstViewController
 
 import UIKit
 
 class FirstViewController: UIViewController {
     
+    // array with the titles
     let data = ["Simple", "Tarzan", "University", "Clothes", "Dance"]
     
     @IBOutlet weak var table: UITableView!
@@ -28,12 +29,15 @@ class FirstViewController: UIViewController {
 
 }
 
+// extension for datasource
 extension FirstViewController: UITableViewDataSource {
     
+    // # of tables rows
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return data.count
     }
-
+    
+    // cells
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = self.table.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CustomCell
@@ -43,24 +47,24 @@ extension FirstViewController: UITableViewDataSource {
         return cell
     }
 }
-
+// extension delegate
 extension FirstViewController: UITableViewDelegate {
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-
-        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-            
-            if segue.identifier == "firstSegue" {
-                if let svc = segue.destinationViewController as? SecondViewController {
-                    svc.index = indexPath.row
-                    print(indexPath.row)
-                }
-            }
-        }
+    // did select row
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier("firstSegue", sender: self)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+        if segue.identifier == "firstSegue" {
+            if let svc = segue.destinationViewController as? SecondViewController {
+                let indexPath = table.indexPathForSelectedRow
+                svc.index = indexPath!.row
+            }
+        }
+    }
 }
-
 
 
 

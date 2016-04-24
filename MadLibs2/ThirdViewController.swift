@@ -4,7 +4,7 @@
 //
 //  Created by Jidde Koekoek on 23/04/16.
 //  Copyright © 2016 Jidde Koekoek. All rights reserved.
-//
+//  ThirdViewController
 
 import UIKit
 

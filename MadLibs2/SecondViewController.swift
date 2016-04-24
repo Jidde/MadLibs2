@@ -4,7 +4,7 @@
 //
 //  Created by Jidde Koekoek on 23/04/16.
 //  Copyright © 2016 Jidde Koekoek. All rights reserved.
-//
+//  SecondViewController
 
 import UIKit
 import Foundation
@@ -22,12 +22,12 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let number = 0
+        var number = 0
         
         if index != nil {
-            let number = index!
+            number = index!
         }
-            
+        
         func importTheText (number: Int) -> String {
             
             let textNames = ["madlib0_simple", "madlib1_tarzan", "madlib2_university", "madlib3_clothes", "madlib4_dance"]
@@ -47,7 +47,6 @@ class SecondViewController: UIViewController {
             }
             return "error"
         }
-        
         
         let text = importTheText(number)
             
@@ -90,8 +89,6 @@ class SecondViewController: UIViewController {
         }
     }
 }
-
-
 
 
 
