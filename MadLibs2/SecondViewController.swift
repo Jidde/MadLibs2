@@ -15,15 +15,20 @@ class SecondViewController: UIViewController {
     var wordsArray: [String] = []
     @IBOutlet weak var wordsLeft: UILabel!
     
+    var index: Int?
     
     var story: Story!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let number = Int(arc4random_uniform(4))
         
-        func importTheText (number: Int) -> String{
+        let number = 0
+        
+        if index != nil {
+            let number = index!
+        }
+            
+        func importTheText (number: Int) -> String {
             
             let textNames = ["madlib0_simple", "madlib1_tarzan", "madlib2_university", "madlib3_clothes", "madlib4_dance"]
             
