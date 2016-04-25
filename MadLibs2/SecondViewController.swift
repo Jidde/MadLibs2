@@ -12,11 +12,12 @@ import Foundation
 class SecondViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
-    var wordsArray: [String] = []
     @IBOutlet weak var wordsLeft: UILabel!
     
+    // Cell index number
     var index: Int?
     
+    // instance of the Story Class
     var story: Story!
 
     override func viewDidLoad() {
@@ -28,6 +29,7 @@ class SecondViewController: UIViewController {
             number = index!
         }
         
+        /// function to import the text
         func importTheText (number: Int) -> String {
             
             let textNames = ["madlib0_simple", "madlib1_tarzan", "madlib2_university", "madlib3_clothes", "madlib4_dance"]
@@ -49,10 +51,12 @@ class SecondViewController: UIViewController {
         }
         
         let text = importTheText(number)
-            
+        
+        // read text in class function
         story = Story(stream: text)
         story.read(text)
         
+        // show the words left
         wordsLeft.text = "\(story.getPlaceholderCount()) word(s) left"
         
         // Do any additional setup after loading the view.
@@ -63,22 +67,25 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /// fills in words in the story
     @IBAction func appendWord(sender: AnyObject) {
-        wordsArray.append(textField.text!)
         
+        // get next placeholder and fill in the placeholder
         story.getNextPlaceholder()
         if textField != nil {
             story.fillInPlaceholder(textField.text!)
         }
         
+        // show words left in label
         wordsLeft.text = "\(story.getPlaceholderRemainingCount()) word(s) left"
 
-        
+        // if all the placeholders are filled, perform segue
         if story.isFilledIn() == true {
             self.performSegueWithIdentifier("secondSegue", sender: self)
         }
     }
     
+    /// prepare for segue, parse the story
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if (segue.identifier == "secondSegue") {

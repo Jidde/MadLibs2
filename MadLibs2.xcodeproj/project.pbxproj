@@ -24,6 +24,7 @@
 		AC21345E1CCBFFAE0069D660 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC21345D1CCBFFAE0069D660 /* ThirdViewController.swift */; };
 		AC2134601CCD077D0069D660 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC21345F1CCD077D0069D660 /* FirstViewController.swift */; };
 		AC2134621CCD0A0C0069D660 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2134611CCD0A0C0069D660 /* CustomCell.swift */; };
+		AC6F1CF31CCE13BF0093C682 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = AC6F1CF21CCE13BF0093C682 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		AC21345D1CCBFFAE0069D660 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		AC21345F1CCD077D0069D660 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		AC2134611CCD0A0C0069D660 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		AC6F1CF21CCE13BF0093C682 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				AC2134231CCBFE6E0069D660 /* ViewController.swift */,
 				AC21345F1CCD077D0069D660 /* FirstViewController.swift */,
 				AC21345B1CCBFF9E0069D660 /* SecondViewController.swift */,
+				AC6F1CF21CCE13BF0093C682 /* README.md */,
 				AC21345D1CCBFFAE0069D660 /* ThirdViewController.swift */,
 				AC2134611CCD0A0C0069D660 /* CustomCell.swift */,
 				AC2134541CCBFEA10069D660 /* Story.swift */,
@@ -300,6 +303,7 @@
 				AC2134601CCD077D0069D660 /* FirstViewController.swift in Sources */,
 				AC2134221CCBFE6E0069D660 /* AppDelegate.swift in Sources */,
 				AC2134621CCD0A0C0069D660 /* CustomCell.swift in Sources */,
+				AC6F1CF31CCE13BF0093C682 /* README.md in Sources */,
 				AC21345A1CCBFEA10069D660 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

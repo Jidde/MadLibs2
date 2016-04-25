@@ -1,0 +1,1 @@
+Mab Libs is an application in which you can create your own little story, by filling in the words you like. Each story has a limited number of 'free spots'. You can choose the story you like by selecting a cell in the tableview. 

@@ -10,6 +10,7 @@ import UIKit
 
 class ThirdViewController: UIViewController {
     
+    // variable story string
     var variable: String?
     
     @IBOutlet weak var storyField: UILabel!
